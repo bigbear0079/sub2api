@@ -16,7 +16,8 @@ services:
   # Sub2API Application
   # ===========================================================================
   sub2api:
-    image: weishaw/sub2api:latest
+    image: ${APP_IMAGE:-ghcr.io/bigbear0079/sub2api:latest}
+    pull_policy: always
     container_name: sub2api
     restart: unless-stopped
     ulimits:
